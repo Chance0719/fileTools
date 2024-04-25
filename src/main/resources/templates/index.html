@@ -97,13 +97,13 @@
                 // tds.eq(3).html(''); // 清空操作
                 delete this.files[index]; // 删除文件队列已经上传成功的文件
                 layer.msg("上传成功。", {time: 3000, icon: 1});
-                $('#refFileList').click();
                 return;
                 //}
                 this.error(index, upload);
             },
             allDone: function(obj){ // 多文件上传完毕后的状态回调
                 console.log(obj)
+                $('#refFileList').click();
             },
             error: function(index, upload){ // 错误回调
                 var that = this;
